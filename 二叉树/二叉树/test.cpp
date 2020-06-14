@@ -23,6 +23,8 @@ class BSTree
 {
 	typedef BSTreeNode<K> Node;
 public:
+
+	//≤Â»Î
 	bool Insert(const K& key)
 	{
 		if (_root == nullptr)
@@ -83,6 +85,7 @@ public:
 		return _InsertR(_root, key);
 	}
 
+	//≤È’“
 	Node* Find(const K& key)
 	{
 		Node* cur = _root;
@@ -117,6 +120,7 @@ public:
 		return _FindR(_root, key);
 	}
 
+	//…æ≥˝
 	bool _EraseR(Node*& cur, const K& key)//µ›πÈ
 	{
 		if (cur == nullptr)
@@ -254,6 +258,7 @@ public:
 		return false;
 	}
 
+	//÷––Ú±È¿˙
 	void _InOrder(Node* root)
 	{
 		if (root == nullptr)
